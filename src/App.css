@@ -1,5 +1,18 @@
+body {
+  background-color: grey;
+}
+
+
+
 .App {
   text-align: center;
+}
+
+
+.App-header {
+  margin: 0;
+  max-height: 90px;
+  
 }
 
 .App-logo {
@@ -15,12 +28,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -35,4 +43,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card {
+  font-family: 'Courier New', Courier, monospace;
+  color: darkgrey;
+ 
+  border: 5px darkslategrey solid;
+  padding: 10px;
+  background-color: lightgoldenrodyellow;
+  margin: 20px;
+  width: 80vw;
+  height: 110px;
+ 
+  
+}
+
+.card-botton {
+ 
+    background-color: darkslategrey;
+    padding: 10px;
+    border-radius: 10%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  
+}
+
+.card-container {
+
+    display: flex;
+    list-style: none;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: space-between;
+    padding: 30px;
+    
+
+}
+
+.navbar-buttom {
+  background-color: #282c34;
+  margin-top: 1000px;
+  list-style-type: none; 
+  display:list-item
+}
+
+.navbar-icon {
+  color: white;
+  list-style: none;
+padding-top: 10px;
+height: 20px;
+
+
+}
+
+.link {
+  color:white;
+  
 }
