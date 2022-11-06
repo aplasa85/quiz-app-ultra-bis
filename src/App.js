@@ -1,13 +1,16 @@
 import './App.css';
 import Header from './components/header/Header';
-import Card from './components/Card'
-import { BsHouse, BsBookmarks, BsPerson } from "react-icons/bs";
+import Footer from './components/Footer/Footer';
+import {Routes, Route, BrowserRouter} from "react-router-dom";
+import Home from './components/Pages/Home';
+import About from './components/Pages/About';
+import Bookmarks from './components/Pages/Bookmarks';
 
 
 const cardsArr =[
-  {id: 1, question: "What is the capital of Mexico?", answer: "Mexico City"},
-  {id: 2,question: "What is the capital of Croatia?", answer: "Zagreb"},
-  {id: 3,question:"What is the capital of Western Sahara?", answer: "El Ayoun"},
+  {id: 1, question: "What is the capital of Mexico?", answer: "Mexico City", bookmarked:false},
+  {id: 2,question: "What is the capital of Croatia?", answer: "Zagreb", bookmarked:false},
+  {id: 3,question:"What is the capital of Western Sahara?", answer: "El Ayoun", bookmarked:false},
 ]
 
 
@@ -15,30 +18,17 @@ const cardsArr =[
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <Header/>
-        
-    <main className='app-main'>
-    <ul className= "card-container">
+      
+<Header/>
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home cardsArr={cardsArr}/>}/> 
+    <Route path="/about" element={<About />}/> 
+    <Route path="/bookmarks" element={<Bookmarks />}/> 
+  </Routes>
+</BrowserRouter>
 
-  {cardsArr.map((card) => {
-    return <Card question={card.question} answer={card.answer} key={card.id} /> 
-  })}
-
-    </ul>
-    </main>
-    
-      </header>
-
-      <div>
-<ul className="navbar-bottom">
-  <li className="navbar-icon" ><a className="link" href="#"><BsHouse /></a></li>
-  <li className="navbar-icon"><a className="link" href="#"><BsBookmarks /></a></li>
-  <li className="navbar-icon"><a className="link" href="#"><BsPerson /></a></li>
-</ul>
-
-
-      </div>
+<Footer />
     </div>
   );
 }

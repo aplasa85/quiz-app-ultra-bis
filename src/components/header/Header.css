@@ -1,6 +1,10 @@
-Header {
+.App-Header {
 text-align: center;
 font-family: fantasy;
+background-color: darkgray;
+color: white;
+margin: 0;
+max-height: 90px;
 ;
 
 }
@@ -8,6 +12,7 @@ font-family: fantasy;
 .h1 {
     color: white;
     align-self: center;
+    
 
 }
 
